@@ -1,0 +1,31 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'org.jointheleague.api.albatross'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+	implementation 'io.springfox:springfox-swagger2:3.0.0'
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+	
+	
+}
+
+
+test {
+	useJUnitPlatform()
+}
